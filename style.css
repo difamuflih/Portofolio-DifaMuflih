@@ -9,6 +9,7 @@ h2,
 h3,
 h4,
 p,
+ul,
 body {
   font-family: "inter", sans-serif;
   margin: 0;
@@ -18,7 +19,7 @@ body {
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 0px 100px;
+  padding: 30px 100px;
   background-color: white;
   box-shadow: 0px 4px 10px #b8b8b8;
 }
@@ -79,6 +80,8 @@ nav .merk {
 
 .about-container,
 .choose {
+  display: flex;
+  flex-direction: column;
   padding: 48px 100px;
   gap: 48px;
 }
@@ -112,7 +115,7 @@ nav .merk {
 }
 
 .choose-content {
-  margin: 100px;
+  margin: 0 100px;
   text-align: center;
   font-size: 28px;
   gap: 24px;
@@ -274,18 +277,82 @@ form :nth-child(4) {
 
 footer {
   background-color: var(--primary);
+  color: white;
 }
 
 footer .container {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  padding: 20px 100px;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 148px;
 }
 
+.footer-merk {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-merk h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.footer-merk p,
+.footer-explore h4,
+.footer-contact h4 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.footer-explore ul {
+  list-style: none;
+  font-size: 16px;
+  font-weight: 300;
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-footer {
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+  gap: 24px;
+}
+
+.follow-us h4 {
+  margin-bottom: 12px;
+}
+
+.follow-us ul {
+  list-style: none;
+  display: flex;
+  gap: 12px;
+}
+
+.copyright {
+  text-align: center;
+}
 /* Tablet */
 @media (max-width: 1080px) {
   .home-content {
