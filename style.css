@@ -1,0 +1,313 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Sacramento&display=swap");
+
+:root {
+  --primary: #7f27ff;
+  --secondary: #ff8911;
+  --info: #fdbf60;
+}
+h2,
+h3,
+h4,
+p,
+body {
+  font-family: "inter", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 100px;
+  background-color: white;
+  box-shadow: 0px 4px 10px #b8b8b8;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+nav .merk {
+  margin: auto 0;
+}
+.home {
+  padding: 50px 100px;
+}
+
+.home-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.picture {
+  margin: auto;
+}
+
+.introduce {
+  margin: auto;
+  width: 550px;
+}
+.introduce h1 {
+  font-family: "sacramento";
+  font-size: 128px;
+  color: var(--primary);
+  font-weight: lighter;
+  margin: 0;
+  text-align: center;
+}
+
+.introduce h4 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: start;
+  margin: 0;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-container,
+.choose {
+  padding: 48px 100px;
+  gap: 48px;
+}
+
+.header {
+  text-align: center;
+  font-weight: 100;
+  font-size: 40px;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  text-align: center;
+  font-size: 28px;
+  gap: 24px;
+}
+
+.keahlian ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 50px;
+}
+
+.keahlian ul li {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.choose-content {
+  margin: 100px;
+  text-align: center;
+  font-size: 28px;
+  gap: 24px;
+}
+
+.portofolio-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px;
+}
+
+.card {
+  border: 1px solid #1e1e1e;
+  border-radius: 24px;
+  width: 608px;
+}
+
+.card-content {
+  margin: 24px;
+}
+
+.card h4 {
+  font-size: 26px;
+}
+
+.card .btn {
+  display: flex;
+  justify-content: center;
+  margin: 36px;
+}
+
+.card button {
+  color: white;
+  font-size: 18px;
+  width: 300px;
+  height: 52px;
+  background-color: var(--primary);
+  border-radius: 7px;
+  border: 0;
+}
+
+.testimonial-content {
+  margin: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.coment {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  border-radius: 25px;
+  padding: 24px;
+}
+
+.coment:nth-child(odd) {
+  background-color: #eee2ff;
+  color: var(--primary);
+}
+.coment:nth-child(even) {
+  background-color: #ffead5;
+  color: var(--secondary);
+}
+
+.sender {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sender h4 {
+  color: #1e1e1e;
+}
+.sender p {
+  color: #718096;
+}
+
+.coment-fill {
+  font-style: italic;
+}
+
+.contact-content {
+  margin: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 65px;
+}
+
+.invite {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.invite h2 {
+  font-size: 48px;
+}
+
+.span :nth-child(1) {
+  color: var(--primary);
+}
+
+.contact-privat {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  font-weight: bold;
+}
+
+.alamat :nth-child(2) {
+  color: var(--info);
+}
+
+.message-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.message h3 {
+  font-size: 36px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+input {
+  width: 600px;
+  height: 65px;
+  border-radius: 15px;
+  border: 0;
+  background-color: #fff3e0;
+}
+
+form :nth-child(4) {
+  height: 200px;
+}
+
+::placeholder {
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #b2b2b2;
+  text-align: start;
+}
+.message button {
+  width: 160px;
+  height: 48px;
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--primary);
+  color: white;
+  font-size: 16px;
+}
+
+footer {
+  background-color: var(--primary);
+}
+
+footer .container {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet */
+@media (max-width: 1080px) {
+  .home-content {
+    flex-direction: column;
+    gap: 120px;
+  }
+  .introduce h4 {
+    text-align: center;
+  }
+  .about-content {
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    text-align: center;
+  }
+  .keahlian img {
+    width: 100px;
+  }
+}
+
+/* Smartphone */
+@media (max-width: 500px) {
+  .keahlian img {
+    width: 44px;
+  }
+}
