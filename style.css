@@ -5,6 +5,9 @@
   --secondary: #ff8911;
   --info: #fdbf60;
 }
+html {
+  scroll-behavior: smooth;
+}
 h2,
 h3,
 h4,
@@ -152,10 +155,9 @@ nav .merk {
 .card button {
   color: white;
   font-size: 18px;
-  width: 300px;
-  height: 52px;
+  padding: 20px 100px;
   background-color: var(--primary);
-  border-radius: 7px;
+  border-radius: 15px;
   border: 0;
 }
 
@@ -356,104 +358,208 @@ footer .container {
 
 .copyright {
   text-align: center;
+  font-size: 18px;
 }
-
-/* hamburger menu */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  height: 20px;
-  justify-content: space-between;
-  position: relative;
-}
-
-.menu-toggle input {
-  position: absolute;
-  width: 40px;
-  height: 28px;
-  left: -6px;
-  top: -3px;
-  opacity: 0;
-  z-index: 2;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background-color: rgb(251, 196, 222);
-  border-radius: 3px;
-  transition: 0.5s;
-}
-
-/* Menu Annimation */
-.menu-toggle span:nth-child(2) {
-  transform-origin: 0 0;
-}
-
-.menu-toggle span:nth-child(4) {
-  transform-origin: 0 100%;
-}
-
-.menu-toggle input:checked ~ span:nth-child(2) {
-  background-color: rgb(255, 228, 240);
-  transform: rotate(45deg) translate(-1px, -1px);
-}
-.menu-toggle input:checked ~ span:nth-child(4) {
-  background-color: rgb(255, 228, 240);
-  transform: rotate(-45deg) translate(-1px, 0);
-}
-.menu-toggle input:checked ~ span:nth-child(3) {
-  transform: scale(0);
-  opacity: 0;
-}
-
 /* Tablet */
 @media (max-width: 1080px) {
+  .home {
+    padding: 20px 40px;
+  }
   .home-content {
-    flex-direction: column;
-    gap: 120px;
+    gap: 130px;
   }
-  .introduce h4 {
-    text-align: center;
+  .picture {
+    width: 420px;
   }
-  .about-content {
+  .header,
+  .contact-content h2 {
+    font-size: 30px;
+  }
+  .about-content,
+  .choose-content {
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     text-align: center;
+    margin: 0;
   }
   .keahlian img {
     width: 100px;
   }
+  .portofolio-content {
+    flex-direction: column;
+    justify-content: center;
+    gap: 41px;
+  }
+  .card {
+    width: 550px;
+    margin: 0 auto;
+  }
+  .card img {
+    width: 502px;
+    margin-bottom: 30px;
+  }
+  .contact-content {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .invite {
+    margin: 0;
+  }
+  footer .container {
+    padding: 18px 64px 18px 64px;
+  }
+  .footer-merk {
+    grid-area: atas;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-explore {
+    grid-area: kiri;
+  }
+  .footer-contact {
+    grid-area: kanan;
+  }
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "atas atas" "kiri kanan";
+    gap: 50px;
+  }
+  .copyright {
+    font-size: 14px;
+  }
 }
 
 /* Smartphone */
-@media (max-width: 500px) {
+@media (max-width: 640px) {
   .keahlian img {
     width: 44px;
   }
-  .menu-toggle {
-    display: flex;
-  }
-
-  nav ul {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    width: 80%;
+  .home-content {
+    gap: 62px;
     flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(255, 93, 171);
-    align-items: center;
-    z-index: -1;
-    transform: translateX(100%);
-    transition: all 1s;
-    opacity: 0;
+  }
+  .picture {
+    display: flex;
+    justify-content: center;
+  }
+  .picture img {
+    width: 272.94px;
+  }
+  .introduce {
+    width: 246px;
+  }
+  .introduce h1 {
+    font-size: 65.81px;
+  }
+  .sender h4,
+  .card h4,
+  .introduce h4,
+  .footer-merk p,
+  .footer-explore h4,
+  .footer-contact h4 {
+    font-size: 14.41px;
+  }
+  .footer-merk h3,
+  .message-content h3,
+  .header,
+  .contact-content h2 {
+    font-size: 24px;
+  }
+  .copyright,
+  .footer-contact p,
+  .invite p,
+  .sender p,
+  .coment-fill,
+  .card p,
+  .choose-content,
+  .about-content {
+    font-size: 12px;
+  }
+  .about-container,
+  .choose {
+    padding: 48px;
+  }
+  .portofolio-content {
+    margin: 48px auto;
+  }
+  .card {
+    width: 380px;
+    margin: 0 auto;
+  }
+  .card img {
+    width: 332px;
+    margin-bottom: 20px;
+  }
+  .card .btn {
+    margin: 24px;
+  }
+  .card button {
+    font-size: 12px;
+    padding: 10px 50px;
+    border-radius: 10px;
+  }
+  .testimonial-content {
+    margin: 48px;
+    gap: 16px;
+  }
+  .coment {
+    gap: 16px;
+    border-radius: 20px;
+    padding: 16px;
+  }
+  .sender {
+    gap: 5px;
+  }
+  .sender img {
+    width: 35px;
+  }
+  .contact-content {
+    margin: 48px;
+    gap: 48px;
+  }
+  .contact-privat img {
+    width: 35px;
+  }
+  .invite {
+    gap: 16px;
+  }
+  form {
+    gap: 16px;
+  }
+  input {
+    width: 387.2px;
+    height: 33px;
+    border-radius: 10px;
   }
 
-  nav ul.slide {
-    transform: translateX(0);
-    opacity: 1;
+  form :nth-child(4) {
+    height: 100px;
+  }
+
+  ::placeholder {
+    padding: 12px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  .message button {
+    width: 120px;
+    height: 36px;
+    font-size: 12px;
+  }
+  footer .container {
+    padding: 14px 48px 14px 48px;
+  }
+  .contact-footer {
+    gap: 16px;
+  }
+  .contact-footer img {
+    width: 20px;
+  }
+  .footer-explore ul {
+    font-size: 12px;
+    margin-top: 18px;
+    gap: 12px;
+  }
+  .follow-us img {
+    width: 14px;
   }
 }
