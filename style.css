@@ -362,6 +362,12 @@ footer .container {
 }
 /* Tablet */
 @media (max-width: 1080px) {
+  nav {
+    padding: 30px 48px;
+  }
+  .navigasi {
+    display: none;
+  }
   .home {
     padding: 20px 40px;
   }
