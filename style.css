@@ -8,6 +8,7 @@
 html {
   scroll-behavior: smooth;
 }
+h1,
 h2,
 h3,
 h4,
@@ -17,8 +18,12 @@ body {
   font-family: "inter", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
-
+footer,
+section {
+  position: relative;
+}
 nav {
   display: flex;
   justify-content: space-between;
@@ -68,7 +73,6 @@ nav .merk {
   color: var(--primary);
   font-weight: lighter;
   margin: 0;
-  text-align: center;
 }
 
 .introduce h4 {
@@ -79,6 +83,7 @@ nav .merk {
 }
 
 .about {
+  margin: 100px 0;
   display: flex;
   flex-direction: column;
 }
@@ -87,7 +92,7 @@ nav .merk {
 .choose {
   display: flex;
   flex-direction: column;
-  padding: 48px 100px;
+  margin: 48px 100px;
   gap: 48px;
 }
 
@@ -95,6 +100,7 @@ nav .merk {
   text-align: center;
   font-weight: 100;
   font-size: 40px;
+  margin: 24px 0;
 }
 
 .about-content {
@@ -110,7 +116,7 @@ nav .merk {
   list-style: none;
   display: flex;
   justify-content: space-between;
-  margin: 10px 50px;
+  margin: 150px 50px;
 }
 
 .keahlian ul li {
@@ -136,6 +142,7 @@ nav .merk {
   border: 1px solid #1e1e1e;
   border-radius: 24px;
   width: 608px;
+  background-color: white;
 }
 
 .card-content {
@@ -143,6 +150,7 @@ nav .merk {
 }
 
 .card h4 {
+  margin: 24px 0;
   font-size: 26px;
 }
 
@@ -360,6 +368,74 @@ footer .container {
   text-align: center;
   font-size: 18px;
 }
+.sircle {
+  position: absolute;
+  z-index: -99;
+}
+.dot-l {
+  width: 646px;
+  height: 646px;
+  border-radius: 50%;
+}
+.dot-m {
+  width: 265px;
+  height: 265px;
+  border-radius: 50%;
+}
+.dot-s {
+  width: 155px;
+  height: 155px;
+  border-radius: 50%;
+}
+.sircle-info {
+  background-color: var(--info);
+  position: absolute;
+}
+.sircle-secondary {
+  background-color: var(--secondary);
+  position: absolute;
+}
+.sircle-primary {
+  background-color: var(--primary);
+  position: absolute;
+}
+.satu {
+  margin-left: 1117px;
+  margin-top: 201px;
+}
+.dua {
+  margin-left: -90px;
+  margin-top: 811px;
+}
+.tiga {
+  margin-left: 1402px;
+  margin-top: 1202px;
+}
+.empat {
+  margin-left: -197px;
+  margin-top: 1898px;
+}
+.lima {
+  margin-left: 1335px;
+  margin-top: 2494px;
+}
+.enam {
+  margin-left: -87px;
+  margin-top: 2800px;
+}
+.tujuh {
+  margin-left: 1010px;
+  margin-top: 3175px;
+}
+.delapan {
+  margin-left: 282px;
+  margin-top: 4000px;
+}
+.sembilan {
+  margin-left: 950px;
+  margin-top: 4712px;
+}
+
 /* Tablet */
 @media (max-width: 1080px) {
   nav {
@@ -380,6 +456,7 @@ footer .container {
   .header,
   .contact-content h2 {
     font-size: 30px;
+    margin: 0;
   }
   .about-content,
   .choose-content {
@@ -405,7 +482,9 @@ footer .container {
     margin-bottom: 30px;
   }
   .contact-content {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .invite {
     margin: 0;
@@ -432,6 +511,46 @@ footer .container {
   .copyright {
     font-size: 14px;
   }
+  .dot-l {
+    width: 499px;
+    height: 499px;
+  }
+  .dot-m {
+    width: 210px;
+    height: 210px;
+  }
+  .dot-s {
+    width: 121px;
+    height: 121px;
+  }
+  .satu {
+    margin-left: 843px;
+    margin-top: 247px;
+  }
+  .tiga {
+    margin-left: 946px;
+    margin-top: 1252px;
+  }
+  .lima {
+    margin-left: 756px;
+    margin-top: 2531px;
+  }
+  .enam {
+    margin-left: -20px;
+    margin-top: 3100px;
+  }
+  .tujuh {
+    margin-left: 615px;
+    margin-top: 3757px;
+  }
+  .delapan {
+    margin-left: 140px;
+    margin-top: 4620px;
+  }
+  .sembilan {
+    margin-left: 600px;
+    margin-top: 5773px;
+  }
 }
 
 /* Smartphone */
@@ -455,6 +574,7 @@ footer .container {
   }
   .introduce h1 {
     font-size: 65.81px;
+    text-align: center;
   }
   .sender h4,
   .card h4,
@@ -480,9 +600,16 @@ footer .container {
   .about-content {
     font-size: 12px;
   }
+  .about {
+    margin: 48px 0;
+  }
   .about-container,
   .choose {
     padding: 48px;
+    margin: 0;
+  }
+  .keahlian ul {
+    margin: 25px 48px;
   }
   .portofolio-content {
     margin: 48px auto;
@@ -567,5 +694,53 @@ footer .container {
   }
   .follow-us img {
     width: 14px;
+  }
+  .dot-l {
+    width: 252px;
+    height: 252px;
+  }
+  .dot-m {
+    width: 106px;
+    height: 106px;
+  }
+  .dot-s {
+    width: 61px;
+    height: 61px;
+  }
+  .satu {
+    margin-left: 311px;
+    margin-top: 402px;
+  }
+  .dua {
+    margin-left: -53px;
+    margin-top: 396px;
+  }
+  .tiga {
+    margin-left: 430px;
+    margin-top: 911px;
+  }
+  .empat {
+    margin-left: -111px;
+    margin-top: 1274px;
+  }
+  .lima {
+    margin-left: 380px;
+    margin-top: 1614px;
+  }
+  .enam {
+    margin-left: -23px;
+    margin-top: 2050px;
+  }
+  .tujuh {
+    margin-left: 327px;
+    margin-top: 2540px;
+  }
+  .delapan {
+    margin-left: 67px;
+    margin-top: 3200px;
+  }
+  .sembilan {
+    margin-left: 284px;
+    margin-top: 3822px;
   }
 }
