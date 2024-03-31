@@ -370,20 +370,23 @@ footer .container {
 }
 .sircle {
   position: absolute;
-  z-index: -99;
 }
 .dot-l {
   width: 646px;
   height: 646px;
   border-radius: 50%;
+  z-index: -99;
 }
 .dot-m {
   width: 265px;
   height: 265px;
+  z-index: -99;
+
   border-radius: 50%;
 }
 .dot-s {
   width: 155px;
+  z-index: -99;
   height: 155px;
   border-radius: 50%;
 }
@@ -434,6 +437,15 @@ footer .container {
 .sembilan {
   margin-left: 950px;
   margin-top: 4712px;
+}
+.garis {
+  width: 73vw;
+  height: 50px;
+  background-color: var(--primary);
+  position: absolute;
+  z-index: -11;
+  margin-left: 195px;
+  margin-top: 50px;
 }
 
 /* Tablet */
@@ -551,12 +563,21 @@ footer .container {
     margin-left: 600px;
     margin-top: 5773px;
   }
+  .garis {
+    width: 73vw;
+    height: 28px;
+    margin-left: 140px;
+    margin-top: 35px;
+  }
 }
 
 /* Smartphone */
 @media (max-width: 640px) {
   .keahlian img {
     width: 44px;
+  }
+  nav {
+    padding: 20px 48px;
   }
   .home-content {
     gap: 62px;
@@ -742,5 +763,11 @@ footer .container {
   .sembilan {
     margin-left: 284px;
     margin-top: 3822px;
+  }
+  .garis {
+    width: 69vw;
+    height: 14px;
+    margin-left: 90px;
+    margin-top: 15px;
   }
 }
