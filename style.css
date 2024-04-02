@@ -649,6 +649,9 @@ footer .container {
 
 /* Smartphone */
 @media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
   .keahlian img {
     width: 44px;
   }
