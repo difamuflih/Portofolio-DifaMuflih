@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio | Difa Muflih</title>
+    
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -257,15 +258,16 @@
                 </div>
             </div>
             <div class="message">
-                <div class="message-content">
+                <div id="message-content">
                   <h3>Send me a message</h3>
-                  <form action="">
-                    <input type="text" placeholder="Full Name">
-                    <input type="text" placeholder="Email address">
-                    <input type="text" placeholder="Subject">
-                    <input type="text" placeholder="Tell about your project">
+                  <form id="message-form" action="https://formspree.io/f/mdoqpgqn" method="post">
+                    <input id="name" name="name" type="text" placeholder="Full Name" maxlength="30" required>
+                    <input id="email" name="email" type="email" placeholder="Email address"  maxlength="30" required>
+                    <input name="phone" type="number" placeholder="Phone Number"  maxlength="12" required>
+                    <input name="subject" type="text" placeholder="Subject"  maxlength="15" required>
+                    <input id="tell" name="tell" type="text" placeholder="Tell about your project"  maxlength="150" required>
+                    <button type="submit">Send Message</button>
                   </form>
-                  <button>Send Message</button>
                 </div>
             </div>
           </div>
@@ -320,6 +322,11 @@
     </footer>
     <!-- akhir footer  -->
 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
     <script src="script.js"></script>
+     
   </body>
 </html>
